@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
               // print("Click Button");
             },
             child: const Text(
-              "Click",
+              "TextButton",
               style: TextStyle(
                 // color: Colors.orange,
                 fontSize: 44,
@@ -26,7 +26,7 @@ class Home extends StatelessWidget {
           FilledButton(
             onPressed: () {},
             child: const Text(
-              "Click",
+              "FilledButton",
               style: TextStyle(
                 fontSize: 44,
                 fontWeight: FontWeight.bold,
@@ -37,7 +37,7 @@ class Home extends StatelessWidget {
           OutlinedButton(
             onPressed: () {},
             child: const Text(
-              "Click",
+              "OutlinedButton",
               style: TextStyle(
                 fontSize: 44,
                 fontWeight: FontWeight.bold,
@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
           ElevatedButton(
             onPressed: (){},
             child: const Text(
-              "Click",
+              "ElevatedButton",
               style: TextStyle(
                 fontSize: 44,
                 fontWeight: FontWeight.bold,
