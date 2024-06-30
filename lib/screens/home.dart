@@ -5,30 +5,58 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /*return Center(
-      child: Container(
-        color: Colors.orange,
-        padding: const EdgeInsets.all(5),
-        child: const Text(
-          "Hello หวัดดี",
-          style: TextStyle(
-            fontSize: 30,
-            // letterSpacing: 3,
-            color: Colors.white,
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          TextButton(
+            onPressed: () {
+              // print("Click Button");
+            },
+            child: const Text(
+              "Click",
+              style: TextStyle(
+                // color: Colors.orange,
+                fontSize: 44,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
-        ),
+          const SizedBox(height: 30,),
+          FilledButton(
+            onPressed: () {},
+            child: const Text(
+              "Click",
+              style: TextStyle(
+                fontSize: 44,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const SizedBox(height: 30,),
+          OutlinedButton(
+            onPressed: () {},
+            child: const Text(
+              "Click",
+              style: TextStyle(
+                fontSize: 44,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const SizedBox(height: 30,),
+          ElevatedButton(
+            onPressed: (){},
+            child: const Text(
+              "Click",
+              style: TextStyle(
+                fontSize: 44,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ],
       ),
-    );*/
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Image.network(
-            "https://storage.googleapis.com/cms-storage-bucket/a9d6ce81aee44ae017ee.png",
-          width: 150,
-          height: 150,
-        )
-      ],
     );
   }
 }
