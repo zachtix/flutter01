@@ -8,62 +8,31 @@ class Item extends StatefulWidget {
 }
 
 class _ItemState extends State<Item> {
-  int qty = 3;
-
-  void addQTY() {
-    setState(() {
-      qty++;
-    });
-  }
-
-  void subtrackQTY() {
-    setState(() {
-      qty <= 0 ? 0 : qty--;
-    });
-  }
+  List data = ["Somchai", "Kong", "Charlie", "Nam"];
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "$qty",
+    return ListView.builder(
+      itemCount: data.length,
+      itemBuilder: (context, index) {
+        return Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            color: Colors.orange,
+          ),
+          margin: const EdgeInsets.all(5),
+          padding: const EdgeInsets.all(40),
+          child: Text(
+            data[index],
             style: const TextStyle(
-              color: Colors.red,
-              fontSize: 50,
+              fontSize: 30,
               fontWeight: FontWeight.bold,
+              color: Colors.white,
+              letterSpacing: 3,
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          OutlinedButton(
-            onPressed: addQTY,
-            child: const Text(
-              "+",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          OutlinedButton(
-            onPressed: subtrackQTY,
-            child: const Text(
-              "-",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 }
