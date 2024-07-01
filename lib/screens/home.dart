@@ -10,11 +10,14 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextButton(
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.red,
+            ),
             onPressed: () {
               // print("Click Button");
             },
             child: const Text(
-              "TextButton",
+              "Text",
               style: TextStyle(
                 // color: Colors.orange,
                 fontSize: 44,
@@ -24,9 +27,13 @@ class Home extends StatelessWidget {
           ),
           const SizedBox(height: 30,),
           FilledButton(
+            style: FilledButton.styleFrom(
+              backgroundColor: Colors.red,
+              foregroundColor: Colors.white,
+            ),
             onPressed: () {},
             child: const Text(
-              "FilledButton",
+              "Filled",
               style: TextStyle(
                 fontSize: 44,
                 fontWeight: FontWeight.bold,
@@ -35,9 +42,15 @@ class Home extends StatelessWidget {
           ),
           const SizedBox(height: 30,),
           OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              side: const BorderSide(
+                color: Colors.red,
+                width: 5,
+              ),
+            ),
             onPressed: () {},
             child: const Text(
-              "OutlinedButton",
+              "Outlined",
               style: TextStyle(
                 fontSize: 44,
                 fontWeight: FontWeight.bold,
@@ -46,9 +59,13 @@ class Home extends StatelessWidget {
           ),
           const SizedBox(height: 30,),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.purple,
+              foregroundColor: Colors.white,
+            ),
             onPressed: (){},
             child: const Text(
-              "ElevatedButton",
+              "Elevated",
               style: TextStyle(
                 fontSize: 44,
                 fontWeight: FontWeight.bold,
